@@ -1,0 +1,52 @@
+{
+    "name": "opencck/mercurius-connectors",
+    "description": "Outbound connection routes for AMPHP: direct, HTTP CONNECT, SOCKS5, VLESS and chains of them as an AMPHP SocketConnector",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["amphp", "socket", "proxy", "socks5", "http-connect", "vless", "connector"],
+    "require": {
+        "php": ">=8.2",
+        "amphp/amp": "^3",
+        "amphp/byte-stream": "^2",
+        "amphp/http-tunnel": "^2",
+        "amphp/socket": "^2",
+        "psr/log": "^3",
+        "rekryt/amphp-vless": "^1.1"
+    },
+    "require-dev": {
+        "amphp/http-client": "^5",
+        "amphp/phpunit-util": "^3",
+        "phpstan/phpstan": "^2",
+        "phpunit/phpunit": "^9.6",
+        "psalm/plugin-phpunit": "^0.22.2",
+        "vimeo/psalm": "^6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mercurius\\Connectors\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mercurius\\Connectors\\Test\\": "test/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "8.2.27"
+        },
+        "allow-plugins": {}
+    },
+    "scripts": {
+        "test": "php -d zend.assertions=1 -d assert.exception=1 vendor/bin/phpunit --exclude-group integration",
+        "test-integration": "php -d zend.assertions=1 -d assert.exception=1 vendor/bin/phpunit --group integration",
+        "phpstan": "phpstan analyse --no-progress --memory-limit=1G",
+        "psalm": "psalm --no-progress --show-info=false",
+        "check": [
+            "@test",
+            "@phpstan",
+            "@psalm"
+        ]
+    }
+}
