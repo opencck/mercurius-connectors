@@ -1,6 +1,6 @@
 # mercurius-connectors
 
-[English](README.md) | **Русский**
+[English](README.md) | **Русский** | [中文](README.cn.md)
 
 Маршруты исходящих соединений как фабрика `SocketConnector` из Amp: напрямую, через HTTP CONNECT-прокси, SOCKS5, VLESS (на [`rekryt/amphp-vless`](https://github.com/rekryt/amphp-vless)) и их цепочки. Через маршрут работает любой клиент AMPHP — HTTP, база данных, SSH.
 

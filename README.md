@@ -1,6 +1,6 @@
 # mercurius-connectors
 
-**English** | [Русский](README.ru.md)
+**English** | [Русский](README.ru.md) | [中文](README.cn.md)
 
 Outbound connection routes as an Amp `SocketConnector` factory: direct, HTTP CONNECT proxy, SOCKS5, VLESS (via [`rekryt/amphp-vless`](https://github.com/rekryt/amphp-vless)) and chains of them. Any AMPHP client — HTTP, database, SSH — can run over a route.
 
