@@ -2,6 +2,8 @@
 
 [English](README.md) | [Русский](README.ru.md) | **中文**
 
+> 本文由模型翻译，尚未经人工审校；如有出入，以英文版为准。
+
 作为 Amp `SocketConnector` 工厂的出站连接路由：直连、HTTP CONNECT 代理、SOCKS5、VLESS（通过 [`rekryt/amphp-vless`](https://github.com/rekryt/amphp-vless)）及它们的链。任何 AMPHP 客户端——HTTP、数据库、SSH——都可以在某条路由上运行。
 
 [Mercurius](https://github.com/opencck/mercurius) 的一部分——一个自主的个人智能体。该包不依赖 Mercurius 应用，可以单独使用。
